@@ -78,12 +78,6 @@ BOOST_AUTO_TEST_CASE(network_identity)
     BOOST_CHECK_EQUAL(main->GetConsensus().nCoinbaseMaturity, 100);
     BOOST_CHECK_EQUAL(test->GetConsensus().nCoinbaseMaturity, 10);
     BOOST_CHECK_EQUAL(reg->GetConsensus().nCoinbaseMaturity, 10);
-    BOOST_CHECK_EQUAL(main->GetBurnAddress(), "DEADuzysCH3c9RTpavbRUVwmovVHEccQzK");
-    BOOST_CHECK_EQUAL(test->GetBurnAddress(), "DEADuzysCH3c9RTpavbRUVwmovVHEccQzK");
-    BOOST_CHECK_EQUAL(reg->GetBurnAddress(), "DEADuzysCH3c9RTpavbRUVwmovVHEccQzK");
-    BOOST_CHECK(IsValidDestinationString(main->GetBurnAddress(), *main));
-    BOOST_CHECK(IsValidDestinationString(test->GetBurnAddress(), *test));
-    BOOST_CHECK(IsValidDestinationString(reg->GetBurnAddress(), *reg));
     BOOST_CHECK_EQUAL(main->DNSSeeds().at(0), "213.181.99.70");
     BOOST_CHECK_EQUAL(main->DNSSeeds().at(1), "216.128.144.174");
     BOOST_CHECK(main->FixedSeeds().empty());

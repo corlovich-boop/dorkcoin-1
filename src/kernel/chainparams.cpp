@@ -102,7 +102,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256{"75bc1a80e13213ada9e18dac132c3c8d3c03ff3d1bcc7aec73f5f35155b8518a"});
 
         if (main) {
-            vSeeds = {"213.181.99.70", "216.128.144.174"};
+            vSeeds = {"seeds.dorkcore.org", "seeds.dorkcoin.org"};
         }
         vFixedSeeds.clear();
         base58Prefixes[PUBKEY_ADDRESS] = {30};
@@ -122,7 +122,6 @@ public:
         if (!regtest) checkpointData = {{{0, expected}}};
         m_assumeutxo_data.clear();
         chainTxData = {regtest ? 0 : 1773037267, 0, 0};
-        vBurnAddress = {"DEADuzysCH3c9RTpavbRUVwmovVHEccQzK"};
 
         if (regtest) {
             for (const auto& [dep, height] : opts.activation_heights) {

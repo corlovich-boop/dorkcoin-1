@@ -2,36 +2,12 @@
 
 ## Dork Core 28.4.0
 
-- Replaced the staking dev fund donation with burning: `-donatetodevfund` is
-  now `-burnpercentage` (0 to 50, default: 25) and the coinstake output is
-  sent to the burn address. GUI labels renamed accordingly.
-- GUI "Create Wallet" can generate a new BIP39 24-word recovery phrase (with
-  a word verification step) or restore a wallet from an existing 12-24 word
-  phrase, with an optional BIP39 passphrase. Restored wallets rescan the whole
-  chain. Mainnet descriptor wallets now derive keys with the registered
-  SLIP-0044 coin type 4151811 (`m/<purpose>'/4151811'/0'`); test chains keep 1'.
-  The staking signkey is taken from the internal (change) chain, so the first
-  receiving address is `m/44'/4151811'/0'/0/0`, the same as in DorkyApp.
-- Use https://dorkcore.org as the Dork Core software website and
-  https://dorkcoin.org for the Dorkcoin network and currency project.
-- Use the canonical GitHub repository at https://github.com/dork-core/dorkcoin
-  for source code and issue reporting.
-- Show only Dorkcoin and Bitcoin Core credits in the GUI splash and About
-  dialog; retain historical upstream attribution in source, COPYING, and CLI.
-- Corrected legacy wallet builds to use Berkeley DB 6.2.38 instead of 4.8.
-  Verified old-format wallet loading, backup, and reload on a disposable copy.
-- Validate the Berkeley DB header/library combination even with explicit
-  BDB_CFLAGS/BDB_LIBS; regression-test Btree v10 backup and reload.
-
-- Software is named Dork Core; the currency and network remain Dorkcoin.
-- Canonical development repository: https://github.com/dork-core/dorkcoin.
-- Updated contributor, security, translation, and release instructions to use
-  the Dork Core project instead of upstream project services.
-- Regenerated system icons and installer artwork from the existing Dorkcoin
-  logo; the macOS application is displayed as Dork Core.
-- Release build metadata is enabled; remaining validation limits are recorded
-  in README.md and must be resolved before a production deployment.
-
+- Staking rewards support a configurable donation percentage with `-donation`
+  (0 to 50, default: 25), sent to the donation address configured in chain
+  parameters.
+- BIP39 wallet creation supports 12- and 24-word phrases in the GUI and via
+  the `createwalletfrommnemonic` RPC/CLI command, including BIP39 and wallet
+  encryption passphrases.
 - Based on Blackcoin More 28.x commit
   `57569507319529821855cf211614a86fb5dceb82`, including Bitcoin Core v28.4.
 - Restored Dorkcoin 13.2.7 network identities, genesis blocks, PoW/PoS target

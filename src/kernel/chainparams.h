@@ -129,8 +129,6 @@ public:
     }
 
     const ChainTxData& TxData() const { return chainTxData; }
-    std::string GetBurnAddress() const;
-    CScript GetBurnScript() const;
 
     /**
      * SigNetOptions holds configurations for creating a signet CChainParams.
@@ -182,7 +180,6 @@ protected:
     CCheckpointData checkpointData;
     std::vector<AssumeutxoData> m_assumeutxo_data;
     ChainTxData chainTxData;
-    std::vector<std::string> vBurnAddress;
 };
 
 std::optional<ChainType> GetNetworkForMagic(const MessageStartChars& pchMessageStart);

@@ -137,15 +137,4 @@ void SelectParams(const ChainType chain)
     globalChainParams = CreateChainParams(gArgs, chain);
 }
 
-// Dorkcoin: Burning of staking rewards
-std::string CChainParams::GetBurnAddress() const
-{
-    return !vBurnAddress.empty() ? vBurnAddress[0] : "";
-}
-
-CScript CChainParams::GetBurnScript() const
-{
-    CTxDestination dest = DecodeDestination(GetBurnAddress());
-    CScript scriptPubKey = GetScriptForDestination(dest);
-    return scriptPubKey;
-}
+// Dorkcoin: staking rewards go entirely to the staker

@@ -278,29 +278,23 @@
               </property>
              </widget>
             </item>
-            <item row="7" column="0">
-             <widget class="QLabel" name="labelBurnedText">
+             <item row="8" column="0">
+             <widget class="QLabel" name="labelRewardTimeText">
               <property name="text">
-               <string>Burn:</string>
+               <string>Time reward:</string>
               </property>
              </widget>
             </item>
-            <item row="7" column="1">
-             <widget class="QLabel" name="labelBurned">
-              <property name="cursor">
-               <cursorShape>IBeamCursor</cursorShape>
-              </property>
+            <item row="8" column="1">
+             <widget class="QLabel" name="labelRewardTime">
               <property name="toolTip">
-               <string>Percentage of stake rewards burned</string>
+               <string>Estimated time based on current staking weight</string>
               </property>
               <property name="text">
-               <string>0</string>
+               <string>Calculating</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-              <property name="textInteractionFlags">
-               <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
               </property>
              </widget>
             </item>

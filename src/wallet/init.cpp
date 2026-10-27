@@ -98,9 +98,7 @@ void WalletInit::AddWalletOptions(ArgsManager& argsman) const
     argsman.AddArg("-staketimio=<n>", strprintf("Proof of stake timeout. (default: %u)", node::DEFAULT_STAKETIMIO), ArgsManager::ALLOW_ANY, OptionsCategory::WALLET);
 
     argsman.AddArg("-minstakingamount=<amt>", strprintf("Minimum input value to be used for staking (default: %u)", wallet::DEFAULT_MIN_STAKING_AMOUNT), ArgsManager::ALLOW_ANY, OptionsCategory::WALLET);
-    argsman.AddArg("-reservebalance=<amt>", strprintf("Reserved balance not used for staking (default: %u)", wallet::DEFAULT_RESERVE_BALANCE), ArgsManager::ALLOW_ANY, OptionsCategory::WALLET);
-    argsman.AddArg("-burnpercentage=<n>", strprintf("Burn the specified percentage of staking rewards (%u to %u, default: %u)",
-        wallet::MIN_BURN_PERCENTAGE, wallet::MAX_BURN_PERCENTAGE, wallet::DEFAULT_BURN_PERCENTAGE), ArgsManager::ALLOW_ANY, OptionsCategory::WALLET);
+     argsman.AddArg("-reservebalance=<amt>", strprintf("Reserved balance not used for staking (default: %u)", wallet::DEFAULT_RESERVE_BALANCE), ArgsManager::ALLOW_ANY, OptionsCategory::WALLET);
 
     argsman.AddArg("-walletrejectlongchains", strprintf("Wallet will not create transactions that violate mempool chain limits (default: %u)", DEFAULT_WALLET_REJECT_LONG_CHAINS), ArgsManager::ALLOW_ANY | ArgsManager::DEBUG_ONLY, OptionsCategory::WALLET_DEBUG_TEST);
     argsman.AddArg("-walletcrosschain", strprintf("Allow reusing wallet files across chains (default: %u)", DEFAULT_WALLETCROSSCHAIN), ArgsManager::ALLOW_ANY | ArgsManager::DEBUG_ONLY, OptionsCategory::WALLET_DEBUG_TEST);
